@@ -3,9 +3,9 @@ from subprocess import call
 from invoke import task
 
 CURR_DIR = os.path.abspath(os.path.dirname(__file__))
-SRC_DIR = os.path.join(CURR_DIR, "signal_interpreter_server")
-UNIT_TEST_DIR = os.path.join(CURR_DIR, "signal_interpreter_server","tests","unit_tests")
-INTEGR_TEST_DIR = os.path.join(CURR_DIR, "signal_interpreter_server","tests", "integration")
+SRC_DIR = os.path.join(CURR_DIR, "add_two")
+UNIT_TEST_DIR = os.path.join(CURR_DIR, "add_two","tests","unit_tests")
+INTEGR_TEST_DIR = os.path.join(CURR_DIR, "add_two","tests", "integration")
 COV_PATH = os.path.join(CURR_DIR, ".coveragerc")
 LINT_PATH = os.path.join(CURR_DIR, ".pylintrc")
 
