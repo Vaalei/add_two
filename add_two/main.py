@@ -2,12 +2,11 @@ from argparse import ArgumentParser
 
 import logging, os
 
-from signal_interpreter_server.routes import parser_factory
-from signal_interpreter_server.routes import signal_interpreter_app
-from signal_interpreter_server.json_parser import JsonParser
-from signal_interpreter_server.xml_parser import XmlParser
+from add_two.parser_factory import ParserFactory
+from add_two.json_parser import JsonParser
+from add_two.xml_parser import XmlParser
 
-
+parser_factory = ParserFactory()
 
 logger = logging.getLogger(__name__)
 
@@ -35,11 +34,10 @@ def load_database(file_path):
 
 def main():
 
-    logger.info("Server startup")
+    logger.info("Adding two...")
     args = parse_arguments()
     register_parsers()
     load_database(args.file_path)
-    signal_interpreter_app.run()
 
 
 def init():

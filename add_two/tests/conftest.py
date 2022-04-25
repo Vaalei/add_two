@@ -2,16 +2,9 @@ import os
 import pytest
 
 
-from signal_interpreter_server.json_parser import JsonParser
-from signal_interpreter_server.routes import signal_interpreter_app
-from signal_interpreter_server.parser_factory import ParserFactory
-from signal_interpreter_server.xml_parser import XmlParser
-
-
-@pytest.fixture
-def signal_interpreter_app_instance():
-    signal_interpreter_app.testing = True
-    return signal_interpreter_app.test_client()
+from add_two.json_parser import JsonParser
+from add_two.parser_factory import ParserFactory
+from add_two.xml_parser import XmlParser
 
 
 @pytest.fixture
