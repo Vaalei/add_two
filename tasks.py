@@ -18,7 +18,7 @@ def lint(_):
     call(f"pylint {SRC_DIR} --rcfile {LINT_PATH}", shell=True)
 
 @task
-def unit_test(_):
+def unit_tests(_):
     cmd = f"pytest {UNIT_TEST_DIR} --cov {SRC_DIR} --cov-config={COV_PATH}"
     print(cmd)
     call(cmd, shell=True)
